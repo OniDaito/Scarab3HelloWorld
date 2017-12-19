@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "/home/vagrant/scarab3test/led_Test.xst" -ofn "/home/vagrant/scarab3test/led_Test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-vq100-5 led_Test.ngc led_Test.ngd  
+map -intstyle ise -p xc3s200-vq100-5 -cm area -ir off -pr off -c 100 -o led_Test_map.ncd led_Test.ngd led_Test.pcf 
+map -intstyle ise -p xc3s200-vq100-5 -cm area -ir off -pr off -c 100 -o led_Test_map.ncd led_Test.ngd led_Test.pcf 
+par -w -intstyle ise -ol high -t 1 led_Test_map.ncd led_Test.ncd led_Test.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml led_Test.twx led_Test.ncd -o led_Test.twr led_Test.pcf 
+bitgen -intstyle ise -f led_Test.ut led_Test.ncd 
+xst -intstyle ise -ifn "/home/vagrant/scarab3test/led_Test.xst" -ofn "/home/vagrant/scarab3test/led_Test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc minispartan3.ucf -p xc3s200a-vq100-5 led_Test.ngc led_Test.ngd  
+map -intstyle ise -p xc3s200a-vq100-5 -cm area -ir off -pr off -c 100 -o led_Test_map.ncd led_Test.ngd led_Test.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc minispartan3.ucf -p xc3s200a-vq100-5 led_Test.ngc led_Test.ngd  
+map -intstyle ise -p xc3s200a-vq100-5 -cm area -ir off -pr off -c 100 -o led_Test_map.ncd led_Test.ngd led_Test.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc minispartan3.ucf -p xc3s200a-vq100-5 led_Test.ngc led_Test.ngd  
+map -intstyle ise -p xc3s200a-vq100-5 -cm area -ir off -pr off -c 100 -o led_Test_map.ncd led_Test.ngd led_Test.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc minispartan3.ucf -p xc3s200a-vq100-5 led_Test.ngc led_Test.ngd  
+map -intstyle ise -p xc3s200a-vq100-5 -cm area -ir off -pr off -c 100 -o led_Test_map.ncd led_Test.ngd led_Test.pcf 
+par -w -intstyle ise -ol high -t 1 led_Test_map.ncd led_Test.ncd led_Test.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml led_Test.twx led_Test.ncd -o led_Test.twr led_Test.pcf -ucf minispartan3.ucf 
+bitgen -intstyle ise -f led_Test.ut led_Test.ncd 

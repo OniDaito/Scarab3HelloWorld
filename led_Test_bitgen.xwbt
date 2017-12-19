@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/vagrant/scarab3test/led_Test.ncd
+OUTFILE=/home/vagrant/scarab3test/led_Test.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s200a-5vq100
+WORKINGDIR=/home/vagrant/scarab3test
+LICENSE=WebPack
+USER_INFO=211371407_0_0_852
